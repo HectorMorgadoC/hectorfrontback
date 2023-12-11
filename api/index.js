@@ -17,6 +17,8 @@ app.use(express.json({
 
 app.use(cors());
 
+app.set('port',process.env.PORT || port );
+
 app.get('/prueba',(request,response) => {
     response.send(JSON.stringify(transactionArray));
 })
@@ -26,6 +28,8 @@ app.post('/prueba',(request,response)=>{
     transactionArray.push(request.body);
     
 })
+
+
 
 app.listen(port,() => {
     console.log('aplicacion corriendo por el puerto 3000');
