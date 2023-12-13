@@ -3,7 +3,7 @@ let buttonList = document.getElementById('listM');
 let body = document.getElementById('body');
 let register = [];
 let number = 0;
-
+/* se realiza prueba */
 function registros(element){
     element.map(e => {
         register.push(e)
